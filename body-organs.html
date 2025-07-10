@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Body Parts - Baby English</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="home-button" onclick="goHome()">🏠 Home</button>
+            <h1 class="page-title">Let's Learn Body Parts! 👶</h1>
+            <div class="progress-info">
+                <span id="organs-learned">Body Parts Learned: 0</span>
+                <span id="organs-clicked">Parts Clicked: 0</span>
+            </div>
+        </div>
+        
+        <div class="learning-stats">
+            <div class="stat-card">
+                <div class="stat-number" id="total-organ-clicks">0</div>
+                <div class="stat-label">Total Clicks</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="unique-organs">0</div>
+                <div class="stat-label">Parts Learned</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="favorite-organ">-</div>
+                <div class="stat-label">Favorite Part</div>
+            </div>
+        </div>
+        
+        <div class="body-organs-container">
+            <div class="organs-grid">
+                <div class="organ-card" onclick="playOrgan('Head')" data-organ="Head">
+                    <div class="organ-icon">🦲</div>
+                    <div class="organ-name">Head</div>
+                    <div class="organ-caption">The top part of your body</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="organ-card" onclick="playOrgan('Hair')" data-organ="Hair">
+                    <div class="organ-icon">🦱</div>
+                    <div class="organ-name">Hair</div>
+                    <div class="organ-caption">Grows on your head</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="organ-card" onclick="playOrgan('Face')" data-organ="Face">
+                    <div class="organ-icon">🙂</div>
+                    <div class="organ-name">Face</div>
+                    <div class="organ-caption">The front part of your head</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="organ-card" onclick="playOrgan('Eyes')" data-organ="Eyes">
+                    <div class="organ-icon">👀</div>
+                    <div class="organ-name">Eyes</div>
+                    <div class="organ-caption">Help you see the world</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="organ-card" onclick="playOrgan('Ears')" data-organ="Ears">
+                    <div class="organ-icon">👂</div>
+                    <div class="organ-name">Ears</div>
+                    <div class="organ-caption">Help you hear sounds</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="organ-card" onclick="playOrgan('Nose')" data-organ="Nose">
+                    <div class="organ-icon">👃</div>
+                    <div class="organ-name">Nose</div>
+                    <div class="organ-caption">Help you smell and breathe</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="organ-card" onclick="playOrgan('Mouth')" data-organ="Mouth">
+                    <div class="organ-icon">👄</div>
+                    <div class="organ-name">Mouth</div>
+                    <div class="organ-caption">Help you eat and talk</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="organ-card" onclick="playOrgan('Tongue')" data-organ="Tongue">
+                    <div class="organ-icon">👅</div>
+                    <div class="organ-name">Tongue</div>
+                    <div class="organ-caption">Help you taste food</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="organ-card" onclick="playOrgan('Teeth')" data-organ="Teeth">
+                    <div class="organ-icon">🦷</div>
+                    <div class="organ-name">Teeth</div>
+                    <div class="organ-caption">Help you chew food</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="organ-card" onclick="playOrgan('Shoulders')" data-organ="Shoulders">
+                    <div class="organ-icon">🤷</div>
+                    <div class="organ-name">Shoulders</div>
+                    <div class="organ-caption">Where your arms connect</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="organ-card" onclick="playOrgan('Arms')" data-organ="Arms">
+                    <div class="organ-icon">💪</div>
+                    <div class="organ-name">Arms</div>
+                    <div class="organ-caption">Help you reach and move</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="organ-card" onclick="playOrgan('Hands')" data-organ="Hands">
+                    <div class="organ-icon">🖐️</div>
+                    <div class="organ-name">Hands</div>
+                    <div class="organ-caption">Help you hold things</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="organ-card" onclick="playOrgan('Fingers')" data-organ="Fingers">
+                    <div class="organ-icon">☝️</div>
+                    <div class="organ-name">Fingers</div>
+                    <div class="organ-caption">Help you touch and grab</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="organ-card" onclick="playOrgan('Chest')" data-organ="Chest">
+                    <div class="organ-icon">🦺</div>
+                    <div class="organ-name">Chest</div>
+                    <div class="organ-caption">The front part of your body</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="organ-card" onclick="playOrgan('Belly')" data-organ="Belly">
+                    <div class="organ-icon">🤰</div>
+                    <div class="organ-name">Belly</div>
+                    <div class="organ-caption">Your tummy area</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="organ-card" onclick="playOrgan('Legs')" data-organ="Legs">
+                    <div class="organ-icon">🦵</div>
+                    <div class="organ-name">Legs</div>
+                    <div class="organ-caption">Help you stand and move</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="organ-card" onclick="playOrgan('Feet')" data-organ="Feet">
+                    <div class="organ-icon">🦶</div>
+                    <div class="organ-name">Feet</div>
+                    <div class="organ-caption">Help you walk and run</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="organ-card" onclick="playOrgan('Toes')" data-organ="Toes">
+                    <div class="organ-icon">🦶</div>
+                    <div class="organ-name">Toes</div>
+                    <div class="organ-caption">Help you balance</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="organ-card" onclick="playOrgan('Knees')" data-organ="Knees">
+                    <div class="organ-icon">🦵</div>
+                    <div class="organ-name">Knees</div>
+                    <div class="organ-caption">Help you bend your legs</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="organ-card" onclick="playOrgan('Elbows')" data-organ="Elbows">
+                    <div class="organ-icon">💪</div>
+                    <div class="organ-name">Elbows</div>
+                    <div class="organ-caption">Help you bend your arms</div>
+                    <div class="click-count">0</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="audio-controls">
+            <button class="play-all-organs-button" onclick="playAllOrgans()">🎵 Play All Body Parts</button>
+            <button class="stop-button" onclick="stopAudio()">⏹️ Stop</button>
+            <button class="reset-button" onclick="resetOrganStats()">🔄 Reset Stats</button>
+            <button class="next-page-button" onclick="goToBodyActivities()">🎯 Body Activities →</button>
+            <button class="full-body-button" onclick="goToFullBody()">🧍‍♂️ Full Body</button>
+        </div>
+        
+        <div class="learning-tips">
+            <h3>💡 Learning Tips:</h3>
+            <ul>
+                <li>Click any body part to hear its name and learn what it does!</li>
+                <li>Point to the body part on your own body while learning!</li>
+                <li>Use the "Play All Body Parts" button to hear all names</li>
+                <li>Watch your progress as you learn about your body</li>
+                <li>Try touching each body part as you learn about it!</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+        function goToFullBody() {
+            window.location.href = 'full-body.html';
+        }
+    </script>
+</body>
+</html> 

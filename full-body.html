@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D Baby Picture</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #f9e7fe 0%, #a1c4fd 100%);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .three-d-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 36px;
+      background: linear-gradient(135deg, #fffbe7 0%, #ffe066 100%);
+      box-shadow:
+        0 8px 32px 0 rgba(80, 0, 120, 0.18),
+        0 1.5px 0 #fff inset,
+        0 0 0 12px #fffbe7;
+      padding: 24px;
+      transition: box-shadow 0.3s, transform 0.3s;
+      animation: float 3s ease-in-out infinite;
+      position: relative; /* Added for positioning the heading */
+    }
+    .three-d-card:hover {
+      box-shadow:
+        0 16px 48px 0 rgba(124,58,237,0.22),
+        0 2px 0 #fff inset,
+        0 0 0 16px #ffe066;
+      transform: scale(1.03) rotateY(-2deg) rotateX(2deg);
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-12px) scale(1.02); }
+    }
+    .baby-img {
+      width: 540px;
+      height: auto;
+      border-radius: 28px;
+      box-shadow: 0 8px 32px rgba(80, 0, 120, 0.10), 0 2px 8px #ffe066;
+      border: 4px solid #fff;
+      background: #fff;
+      display: block;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .three-d-card:hover .baby-img {
+      box-shadow: 0 16px 48px rgba(124,58,237,0.18), 0 4px 16px #ffe066;
+      transform: scale(1.04) rotateY(-1deg);
+    }
+    @media (max-width: 800px) {
+      .baby-img {
+        width: 98vw;
+        max-width: 100%;
+      }
+      .three-d-card {
+        padding: 6vw;
+        border-radius: 8vw;
+      }
+    }
+    .main-heading {
+      font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+      font-size: 2.2rem;
+      color: #fff;
+      background: rgba(255,183,3,0.92);
+      text-shadow: 0 2px 12px #a1c4fd, 0 1px 0 #fffbe7;
+      border-radius: 32px;
+      padding: 8px 36px 8px 36px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      margin: 0;
+      letter-spacing: 1.5px;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(124,58,237,0.10);
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div class="three-d-card">
+    <img src="images/body-3d.jpg" alt="Baby Picture" class="baby-img">
+  </div>
+</body>
+</html> 

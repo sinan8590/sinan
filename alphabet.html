@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn the Alphabet - Baby English</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="home-button" onclick="goHome()">🏠 Home</button>
+            <h1 class="page-title">Let's Learn the Alphabet! 🎵</h1>
+            <div class="progress-info">
+                <span id="words-learned">Words Learned: 0</span>
+                <span id="letters-clicked">Letters Clicked: 0</span>
+            </div>
+        </div>
+        
+        <div class="learning-stats">
+            <div class="stat-card">
+                <div class="stat-number" id="total-clicks">0</div>
+                <div class="stat-label">Total Clicks</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="unique-letters">0</div>
+                <div class="stat-label">Letters Learned</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="favorite-letter">-</div>
+                <div class="stat-label">Favorite Letter</div>
+            </div>
+        </div>
+        
+        <div class="alphabet-container">
+            <div class="alphabet-grid">
+                <div class="letter-card" onclick="playLetter('A')" data-letter="A">
+                    <div class="letter">A</div>
+                    <div class="word">Apple</div>
+                    <div class="emoji">🍎</div>
+                    <div class="click-count">0</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('B')" data-letter="B">
+                    <div class="letter">B</div>
+                    <div class="word">Ball</div>
+                    <div class="emoji">⚽</div>
+                    <div class="click-count">0</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('C')" data-letter="C">
+                    <div class="letter">C</div>
+                    <div class="word">Cat</div>
+                    <div class="emoji">🐱</div>
+                    <div class="click-count">0</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('D')" data-letter="D">
+                    <div class="letter">D</div>
+                    <div class="word">Dog</div>
+                    <div class="emoji">🐕</div>
+                    <div class="click-count">0</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('E')" data-letter="E">
+                    <div class="letter">E</div>
+                    <div class="word">Elephant</div>
+                    <div class="emoji">🐘</div>
+                    <div class="click-count">0</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('F')" data-letter="F">
+                    <div class="letter">F</div>
+                    <div class="word">Fish</div>
+                    <div class="emoji">🐠</div>
+                    <div class="click-count">0</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('G')" data-letter="G">
+                    <div class="letter">G</div>
+                    <div class="word">Giraffe</div>
+                    <div class="emoji">🦒</div>
+                    <div class="click-count">0</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('H')" data-letter="H">
+                    <div class="letter">H</div>
+                    <div class="word">House</div>
+                    <div class="emoji">🏠</div>
+                    <div class="click-count">0</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('I')" data-letter="I">
+                    <div class="letter">I</div>
+                    <div class="word">Ice Cream</div>
+                    <div class="emoji">🍦</div>
+                    <div class="click-count">0</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('J')" data-letter="J">
+                    <div class="letter">J</div>
+                    <div class="word">Jellyfish</div>
+                    <div class="emoji">🪼</div>
+                    <div class="click-count">0</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('K')" data-letter="K">
+                    <div class="letter">K</div>
+                    <div class="word">Kangaroo</div>
+                    <div class="emoji">🦘</div>
+                    <div class="click-count">0</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('L')" data-letter="L">
+                    <div class="letter">L</div>
+                    <div class="word">Lion</div>
+                    <div class="emoji">🦁</div>
+                    <div class="click-count">0</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('M')" data-letter="M">
+                    <div class="letter">M</div>
+                    <div class="word">Monkey</div>
+                    <div class="emoji">🐒</div>
+                    <div class="click-count">0</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('N')" data-letter="N">
+                    <div class="letter">N</div>
+                    <div class="word">Nest</div>
+                    <div class="emoji">🪺</div>
+                    <div class="click-count">0</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('O')" data-letter="O">
+                    <div class="letter">O</div>
+                    <div class="word">Orange</div>
+                    <div class="emoji">🍊</div>
+                    <div class="click-count">0</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('P')" data-letter="P">
+                    <div class="letter">P</div>
+                    <div class="word">Panda</div>
+                    <div class="emoji">🐼</div>
+                    <div class="click-count">0</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('Q')" data-letter="Q">
+                    <div class="letter">Q</div>
+                    <div class="word">Queen</div>
+                    <div class="emoji">👑</div>
+                    <div class="click-count">0</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('R')" data-letter="R">
+                    <div class="letter">R</div>
+                    <div class="word">Rainbow</div>
+                    <div class="emoji">🌈</div>
+                    <div class="click-count">0</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('S')" data-letter="S">
+                    <div class="letter">S</div>
+                    <div class="word">Star</div>
+                    <div class="emoji">⭐</div>
+                    <div class="click-count">0</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('T')" data-letter="T">
+                    <div class="letter">T</div>
+                    <div class="word">Tree</div>
+                    <div class="emoji">🌳</div>
+                    <div class="click-count">0</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('U')" data-letter="U">
+                    <div class="letter">U</div>
+                    <div class="word">Umbrella</div>
+                    <div class="emoji">☂️</div>
+                    <div class="click-count">0</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('V')" data-letter="V">
+                    <div class="letter">V</div>
+                    <div class="word">Violin</div>
+                    <div class="emoji">🎻</div>
+                    <div class="click-count">0</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('W')" data-letter="W">
+                    <div class="letter">W</div>
+                    <div class="word">Whale</div>
+                    <div class="emoji">🐋</div>
+                    <div class="click-count">0</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('X')" data-letter="X">
+                    <div class="letter">X</div>
+                    <div class="word">Xylophone</div>
+                    <div class="emoji">🎵</div>
+                    <div class="click-count">0</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('Y')" data-letter="Y">
+                    <div class="letter">Y</div>
+                    <div class="word">Yellow</div>
+                    <div class="emoji">💛</div>
+                    <div class="click-count">0</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('Z')" data-letter="Z">
+                    <div class="letter">Z</div>
+                    <div class="word">Zebra</div>
+                    <div class="emoji">🦓</div>
+                    <div class="click-count">0</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="audio-controls">
+            <button class="play-all-button" onclick="playAllLetters()">🎵 Play All Letters</button>
+            <button class="stop-button" onclick="stopAudio()">⏹️ Stop</button>
+            <button class="reset-button" onclick="resetStats()">🔄 Reset Stats</button>
+        </div>
+        
+        <div class="learning-tips">
+            <h3>💡 Learning Tips:</h3>
+            <ul>
+                <li>Click any letter to hear its sound and see different words!</li>
+                <li>Each letter has 5 different words - keep clicking to discover them all!</li>
+                <li>Use the "Play All Letters" button to hear the entire alphabet</li>
+                <li>Watch your progress as you learn more letters and words</li>
+                <li>Try pressing letter keys on your keyboard for quick access</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 

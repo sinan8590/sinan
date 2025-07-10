@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby English Learning</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-section">
+            <div class="stars">
+                <div class="star">⭐</div>
+                <div class="star">⭐</div>
+                <div class="star">⭐</div>
+                <div class="star">⭐</div>
+                <div class="star">⭐</div>
+            </div>
+            
+            <h1 class="main-title">
+                <span class="rainbow-text">Welcome to</span><br>
+                <span class="baby-text">Baby English World!</span>
+            </h1>
+            
+            <div class="welcome-message">
+                <p>👶 Hello little one! 👶</p>
+                <p>Ready to learn the ABCs?</p>
+                <p>Let's have fun together! 🎈</p>
+            </div>
+            
+            <div class="floating-animals">
+                <div class="animal">🐘</div>
+                <div class="animal">🦁</div>
+                <div class="animal">🐼</div>
+                <div class="animal">🦒</div>
+                <div class="animal">🐨</div>
+            </div>
+            
+            <button class="start-button" onclick="goToAlphabet()">
+                <span class="button-text">Start Learning ABCs!</span>
+                <span class="button-icon">🎵</span>
+            </button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn the Alphabet - Baby English</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="home-button" onclick="goHome()">🏠 Home</button>
+            <h1 class="page-title">Let's Learn the Alphabet! 🎵</h1>
+        </div>
+        
+        <div class="alphabet-container">
+            <div class="alphabet-grid">
+                <div class="letter-card" onclick="playLetter('A')" data-letter="A">
+                    <div class="letter">A</div>
+                    <div class="word">Apple</div>
+                    <div class="emoji">🍎</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('B')" data-letter="B">
+                    <div class="letter">B</div>
+                    <div class="word">Ball</div>
+                    <div class="emoji">⚽</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('C')" data-letter="C">
+                    <div class="letter">C</div>
+                    <div class="word">Cat</div>
+                    <div class="emoji">🐱</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('D')" data-letter="D">
+                    <div class="letter">D</div>
+                    <div class="word">Dog</div>
+                    <div class="emoji">🐕</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('E')" data-letter="E">
+                    <div class="letter">E</div>
+                    <div class="word">Elephant</div>
+                    <div class="emoji">🐘</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('F')" data-letter="F">
+                    <div class="letter">F</div>
+                    <div class="word">Fish</div>
+                    <div class="emoji">🐠</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('G')" data-letter="G">
+                    <div class="letter">G</div>
+                    <div class="word">Giraffe</div>
+                    <div class="emoji">🦒</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('H')" data-letter="H">
+                    <div class="letter">H</div>
+                    <div class="word">House</div>
+                    <div class="emoji">🏠</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('I')" data-letter="I">
+                    <div class="letter">I</div>
+                    <div class="word">Ice Cream</div>
+                    <div class="emoji">🍦</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('J')" data-letter="J">
+                    <div class="letter">J</div>
+                    <div class="word">Jellyfish</div>
+                    <div class="emoji">🪼</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('K')" data-letter="K">
+                    <div class="letter">K</div>
+                    <div class="word">Kangaroo</div>
+                    <div class="emoji">🦘</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('L')" data-letter="L">
+                    <div class="letter">L</div>
+                    <div class="word">Lion</div>
+                    <div class="emoji">🦁</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('M')" data-letter="M">
+                    <div class="letter">M</div>
+                    <div class="word">Monkey</div>
+                    <div class="emoji">🐒</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('N')" data-letter="N">
+                    <div class="letter">N</div>
+                    <div class="word">Nest</div>
+                    <div class="emoji">🪺</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('O')" data-letter="O">
+                    <div class="letter">O</div>
+                    <div class="word">Orange</div>
+                    <div class="emoji">🍊</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('P')" data-letter="P">
+                    <div class="letter">P</div>
+                    <div class="word">Panda</div>
+                    <div class="emoji">🐼</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('Q')" data-letter="Q">
+                    <div class="letter">Q</div>
+                    <div class="word">Queen</div>
+                    <div class="emoji">👑</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('R')" data-letter="R">
+                    <div class="letter">R</div>
+                    <div class="word">Rainbow</div>
+                    <div class="emoji">🌈</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('S')" data-letter="S">
+                    <div class="letter">S</div>
+                    <div class="word">Star</div>
+                    <div class="emoji">⭐</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('T')" data-letter="T">
+                    <div class="letter">T</div>
+                    <div class="word">Tree</div>
+                    <div class="emoji">🌳</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('U')" data-letter="U">
+                    <div class="letter">U</div>
+                    <div class="word">Umbrella</div>
+                    <div class="emoji">☂️</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('V')" data-letter="V">
+                    <div class="letter">V</div>
+                    <div class="word">Violin</div>
+                    <div class="emoji">🎻</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('W')" data-letter="W">
+                    <div class="letter">W</div>
+                    <div class="word">Whale</div>
+                    <div class="emoji">🐋</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('X')" data-letter="X">
+                    <div class="letter">X</div>
+                    <div class="word">Xylophone</div>
+                    <div class="emoji">🎵</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('Y')" data-letter="Y">
+                    <div class="letter">Y</div>
+                    <div class="word">Yellow</div>
+                    <div class="emoji">💛</div>
+                </div>
+                <div class="letter-card" onclick="playLetter('Z')" data-letter="Z">
+                    <div class="letter">Z</div>
+                    <div class="word">Zebra</div>
+                    <div class="emoji">🦓</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="audio-controls">
+            <button class="play-all-button" onclick="playAllLetters()">🎵 Play All Letters</button>
+            <button class="stop-button" onclick="stopAudio()">⏹️ Stop</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Neue', cursive;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Welcome Page Styles */
+.welcome-section {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    animation: bounceIn 1s ease-out;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.05); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.stars {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.star {
+    font-size: 24px;
+    animation: twinkle 2s infinite;
+}
+
+.star:nth-child(2) { animation-delay: 0.4s; }
+.star:nth-child(3) { animation-delay: 0.8s; }
+.star:nth-child(4) { animation-delay: 1.2s; }
+.star:nth-child(5) { animation-delay: 1.6s; }
+
+@keyframes twinkle {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+.main-title {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.rainbow-text {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff9ff3);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: rainbow 3s ease-in-out infinite;
+}
+
+@keyframes rainbow {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.baby-text {
+    color: #ff6b9d;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-message {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.welcome-message p {
+    margin: 10px 0;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.welcome-message p:nth-child(2) { animation-delay: 0.2s; }
+.welcome-message p:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.floating-animals {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.animal {
+    position: absolute;
+    font-size: 2rem;
+    animation: float 6s ease-in-out infinite;
+}
+
+.animal:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+.animal:nth-child(2) { top: 30%; right: 15%; animation-delay: 1s; }
+.animal:nth-child(3) { bottom: 30%; left: 20%; animation-delay: 2s; }
+.animal:nth-child(4) { bottom: 20%; right: 10%; animation-delay: 3s; }
+.animal:nth-child(5) { top: 50%; left: 50%; animation-delay: 4s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-20px) rotate(5deg); }
+    66% { transform: translateY(-10px) rotate(-5deg); }
+}
+
+.start-button {
+    background: linear-gradient(45deg, #ff6b9d, #ff8e53);
+    border: none;
+    border-radius: 50px;
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(255, 107, 157, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Comic Neue', cursive;
+    font-weight: bold;
+}
+
+.start-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(255, 107, 157, 0.4);
+}
+
+.start-button:active {
+    transform: translateY(-2px);
+}
+
+.button-icon {
+    font-size: 1.8rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+/* Alphabet Page Styles */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.home-button {
+    background: linear-gradient(45deg, #4ecdc4, #44a08d);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Comic Neue', cursive;
+    font-weight: bold;
+}
+
+.home-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(78, 205, 196, 0.3);
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.alphabet-container {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.alphabet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.letter-card {
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.letter-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s;
+}
+
+.letter-card:hover::before {
+    left: 100%;
+}
+
+.letter-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border-color: #ff6b9d;
+}
+
+.letter-card:active {
+    transform: translateY(-5px) scale(1.02);
+}
+
+.letter {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.word {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.emoji {
+    font-size: 2rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.audio-controls {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.play-all-button, .stop-button {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Comic Neue', cursive;
+    font-weight: bold;
+}
+
+.play-all-button:hover, .stop-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.stop-button {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .welcome-section {
+        padding: 30px 20px;
+    }
+    
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .welcome-message {
+        font-size: 1.2rem;
+    }
+    
+    .alphabet-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 15px;
+    }
+    
+    .letter-card {
+        padding: 15px;
+    }
+    
+    .letter {
+        font-size: 2.5rem;
+    }
+    
+    .emoji {
+        font-size: 1.5rem;
+    }
+    
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .alphabet-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .audio-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Animation for letter cards when clicked */
+.letter-card.clicked {
+    animation: letterClick 0.3s ease-out;
+}
+
+@keyframes letterClick {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+// Navigation functions
+function goToAlphabet() {
+    window.location.href = 'alphabet.html';
+}
+
+function goHome() {
+    window.location.href = 'index.html';
+}
+
+// Audio functionality
+let currentAudio = null;
+let isPlayingAll = false;
+let playAllInterval = null;
+
+// Letter data with words and audio URLs
+const letterData = {
+    'A': { word: 'Apple', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/a--_gb_1.mp3' },
+    'B': { word: 'Ball', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/b--_gb_1.mp3' },
+    'C': { word: 'Cat', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/c--_gb_1.mp3' },
+    'D': { word: 'Dog', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/d--_gb_1.mp3' },
+    'E': { word: 'Elephant', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/e--_gb_1.mp3' },
+    'F': { word: 'Fish', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/f--_gb_1.mp3' },
+    'G': { word: 'Giraffe', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/g--_gb_1.mp3' },
+    'H': { word: 'House', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/h--_gb_1.mp3' },
+    'I': { word: 'Ice Cream', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/i--_gb_1.mp3' },
+    'J': { word: 'Jellyfish', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/j--_gb_1.mp3' },
+    'K': { word: 'Kangaroo', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/k--_gb_1.mp3' },
+    'L': { word: 'Lion', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/l--_gb_1.mp3' },
+    'M': { word: 'Monkey', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/m--_gb_1.mp3' },
+    'N': { word: 'Nest', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/n--_gb_1.mp3' },
+    'O': { word: 'Orange', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/o--_gb_1.mp3' },
+    'P': { word: 'Panda', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/p--_gb_1.mp3' },
+    'Q': { word: 'Queen', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/q--_gb_1.mp3' },
+    'R': { word: 'Rainbow', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/r--_gb_1.mp3' },
+    'S': { word: 'Star', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/s--_gb_1.mp3' },
+    'T': { word: 'Tree', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/t--_gb_1.mp3' },
+    'U': { word: 'Umbrella', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/u--_gb_1.mp3' },
+    'V': { word: 'Violin', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/v--_gb_1.mp3' },
+    'W': { word: 'Whale', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/w--_gb_1.mp3' },
+    'X': { word: 'Xylophone', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/x--_gb_1.mp3' },
+    'Y': { word: 'Yellow', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/y--_gb_1.mp3' },
+    'Z': { word: 'Zebra', audio: 'https://ssl.gstatic.com/dictionary/static/sounds/oxford/z--_gb_1.mp3' }
+};
+
+// Function to play individual letter audio
+function playLetter(letter) {
+    // Stop any currently playing audio
+    if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+    }
+    
+    // Add click animation
+    const letterCard = document.querySelector(`[data-letter="${letter}"]`);
+    if (letterCard) {
+        letterCard.classList.add('clicked');
+        setTimeout(() => {
+            letterCard.classList.remove('clicked');
+        }, 300);
+    }
+    
+    // Create and play audio
+    try {
+        currentAudio = new Audio(letterData[letter].audio);
+        currentAudio.play().catch(error => {
+            console.log('Audio playback failed, using fallback method');
+            // Fallback: Use speech synthesis
+            speakLetter(letter);
+        });
+    } catch (error) {
+        console.log('Audio creation failed, using speech synthesis');
+        speakLetter(letter);
+    }
+}
+
+// Fallback function using speech synthesis
+function speakLetter(letter) {
+    if ('speechSynthesis' in window) {
+        const utterance = new SpeechSynthesisUtterance(letter);
+        utterance.rate = 0.8;
+        utterance.pitch = 1.2;
+        utterance.volume = 1;
+        speechSynthesis.speak(utterance);
+    }
+}
+
+// Function to play all letters in sequence
+function playAllLetters() {
+    if (isPlayingAll) {
+        stopAudio();
+        return;
+    }
+    
+    isPlayingAll = true;
+    const letters = Object.keys(letterData);
+    let currentIndex = 0;
+    
+    // Update button text
+    const playAllButton = document.querySelector('.play-all-button');
+    if (playAllButton) {
+        playAllButton.textContent = '⏸️ Pause All';
+    }
+    
+    function playNextLetter() {
+        if (!isPlayingAll || currentIndex >= letters.length) {
+            isPlayingAll = false;
+            if (playAllButton) {
+                playAllButton.textContent = '🎵 Play All Letters';
+            }
+            return;
+        }
+        
+        const letter = letters[currentIndex];
+        playLetter(letter);
+        
+        // Highlight current letter
+        const letterCard = document.querySelector(`[data-letter="${letter}"]`);
+        if (letterCard) {
+            letterCard.style.transform = 'translateY(-15px) scale(1.1)';
+            letterCard.style.boxShadow = '0 20px 40px rgba(255, 107, 157, 0.4)';
+            letterCard.style.borderColor = '#ff6b9d';
+            
+            setTimeout(() => {
+                letterCard.style.transform = '';
+                letterCard.style.boxShadow = '';
+                letterCard.style.borderColor = '';
+            }, 2000);
+        }
+        
+        currentIndex++;
+        
+        // Schedule next letter
+        playAllInterval = setTimeout(playNextLetter, 2500);
+    }
+    
+    playNextLetter();
+}
+
+// Function to stop all audio
+function stopAudio() {
+    isPlayingAll = false;
+    
+    if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentAudio = null;
+    }
+    
+    if (playAllInterval) {
+        clearTimeout(playAllInterval);
+        playAllInterval = null;
+    }
+    
+    // Reset button text
+    const playAllButton = document.querySelector('.play-all-button');
+    if (playAllButton) {
+        playAllButton.textContent = '🎵 Play All Letters';
+    }
+    
+    // Reset all letter cards
+    const letterCards = document.querySelectorAll('.letter-card');
+    letterCards.forEach(card => {
+        card.style.transform = '';
+        card.style.boxShadow = '';
+        card.style.borderColor = '';
+    });
+}
+
+// Add keyboard support for letter navigation
+document.addEventListener('keydown', function(event) {
+    const key = event.key.toUpperCase();
+    if (letterData[key]) {
+        playLetter(key);
+    }
+    
+    // Space bar to play/pause all
+    if (event.code === 'Space') {
+        event.preventDefault();
+        if (isPlayingAll) {
+            stopAudio();
+        } else {
+            playAllLetters();
+        }
+    }
+    
+    // Escape to stop all
+    if (event.code === 'Escape') {
+        stopAudio();
+    }
+});
+
+// Add touch/click feedback for mobile devices
+document.addEventListener('DOMContentLoaded', function() {
+    // Add ripple effect to letter cards
+    const letterCards = document.querySelectorAll('.letter-card');
+    
+    letterCards.forEach(card => {
+        card.addEventListener('touchstart', function(e) {
+            this.style.transform = 'scale(0.95)';
+        });
+        
+        card.addEventListener('touchend', function(e) {
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 150);
+        });
+    });
+    
+    // Add welcome page animations
+    const welcomeSection = document.querySelector('.welcome-section');
+    if (welcomeSection) {
+        // Add some interactive elements
+        const startButton = document.querySelector('.start-button');
+        if (startButton) {
+            startButton.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.05)';
+            });
+            
+            startButton.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        }
+    }
+    
+    // Add confetti effect for successful interactions
+    function createConfetti() {
+        const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57', '#ff9ff3'];
+        const confettiCount = 50;
+        
+        for (let i = 0; i < confettiCount; i++) {
+            const confetti = document.createElement('div');
+            confetti.style.position = 'fixed';
+            confetti.style.left = Math.random() * 100 + 'vw';
+            confetti.style.top = '-10px';
+            confetti.style.width = '10px';
+            confetti.style.height = '10px';
+            confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.borderRadius = '50%';
+            confetti.style.pointerEvents = 'none';
+            confetti.style.zIndex = '9999';
+            confetti.style.animation = `fall ${Math.random() * 3 + 2}s linear forwards`;
+            
+            document.body.appendChild(confetti);
+            
+            setTimeout(() => {
+                confetti.remove();
+            }, 5000);
+        }
+    }
+    
+    // Add confetti animation to CSS
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+    
+    // Trigger confetti on special interactions
+    const letterCards = document.querySelectorAll('.letter-card');
+    letterCards.forEach((card, index) => {
+        card.addEventListener('click', function() {
+            if (index % 5 === 0) { // Every 5th letter
+                createConfetti();
+            }
+        });
+    });
+});
+
+// Add accessibility features
+function addAccessibilityFeatures() {
+    // Add ARIA labels to letter cards
+    const letterCards = document.querySelectorAll('.letter-card');
+    letterCards.forEach(card => {
+        const letter = card.getAttribute('data-letter');
+        const word = letterData[letter]?.word || '';
+        card.setAttribute('aria-label', `Letter ${letter} for ${word}. Click to hear the sound.`);
+        card.setAttribute('role', 'button');
+        card.setAttribute('tabindex', '0');
+        
+        // Add keyboard support
+        card.addEventListener('keydown', function(e) {
+            if (e.code === 'Enter' || e.code === 'Space') {
+                e.preventDefault();
+                playLetter(letter);
+            }
+        });
+    });
+}
+
+// Initialize accessibility features when DOM is loaded
+document.addEventListener('DOMContentLoaded', addAccessibilityFeatures);
+# Baby English Learning Website 🍼
+
+A fun and interactive English learning website designed specifically for babies and toddlers! This colorful, engaging web application helps little ones learn the alphabet through visual and audio stimulation.
+
+## Features 🌟
+
+### Welcome Page
+- **Attractive Design**: Beautiful gradient background with floating animations
+- **Baby-Friendly Interface**: Large, colorful buttons and friendly emojis
+- **Interactive Elements**: Twinkling stars, floating animals, and rainbow text
+- **Responsive Design**: Works perfectly on tablets, phones, and computers
+
+### Alphabet Learning Page
+- **Complete A-Z**: All 26 letters with associated words and emojis
+- **Audio Pronunciation**: Click any letter to hear it pronounced clearly
+- **Visual Learning**: Each letter has a colorful card with:
+  - Large, clear letter display
+  - Associated word (e.g., "A" for "Apple")
+  - Fun emoji representation (🍎)
+- **Interactive Features**:
+  - Hover effects with smooth animations
+  - Click feedback with visual responses
+  - Play all letters in sequence
+  - Stop/pause functionality
+
+## How to Use 📖
+
+### Getting Started
+1. Open `index.html` in any modern web browser
+2. You'll see the welcoming homepage with colorful animations
+3. Click the "Start Learning ABCs!" button to begin
+
+### Learning the Alphabet
+1. On the alphabet page, you'll see all 26 letters in colorful cards
+2. **Click any letter** to hear its pronunciation
+3. **Use the "Play All Letters" button** to hear the entire alphabet in sequence
+4. **Press the "Stop" button** to stop any playing audio
+5. **Click the "Home" button** to return to the welcome page
+
+### Keyboard Controls
+- **Press any letter key** (A-Z) to hear that letter
+- **Press Spacebar** to play/pause all letters
+- **Press Escape** to stop all audio
+
+## Technical Features 🔧
+
+### Audio System
+- **Primary**: Uses Google's pronunciation API for clear, accurate audio
+- **Fallback**: Speech synthesis for offline compatibility
+- **Multiple Controls**: Individual letter play, sequential play, and stop functions
+
+### Responsive Design
+- **Mobile Optimized**: Touch-friendly interface for tablets and phones
+- **Desktop Friendly**: Full-featured experience on computers
+- **Cross-Browser**: Works on Chrome, Firefox, Safari, and Edge
+
+### Accessibility
+- **Keyboard Navigation**: Full keyboard support for accessibility
+- **ARIA Labels**: Screen reader friendly
+- **High Contrast**: Clear visual elements for all users
+
+## File Structure 📁
+
+```
+baby-english-learning/
+├── index.html          # Welcome page
+├── alphabet.html       # Alphabet learning page
+├── styles.css          # All styling and animations
+├── script.js           # Interactive functionality
+└── README.md           # This file
+```
+
+## Browser Compatibility 🌐
+
+- ✅ Chrome (recommended)
+- ✅ Firefox
+- ✅ Safari
+- ✅ Edge
+- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
+
+## Audio Requirements 🔊
+
+- **Internet Connection**: Required for Google pronunciation API
+- **Speakers/Headphones**: For audio playback
+- **Browser Permissions**: May need to allow audio playback
+
+## Tips for Parents 👨‍👩‍👧‍👦
+
+1. **Start Simple**: Begin with a few letters at a time
+2. **Repeat Often**: Babies learn through repetition
+3. **Make it Fun**: Encourage interaction and celebration
+4. **Use Together**: Sit with your child and learn together
+5. **Praise Progress**: Celebrate every interaction and attempt
+
+## Educational Benefits 📚
+
+- **Letter Recognition**: Visual learning of alphabet shapes
+- **Phonetic Awareness**: Audio pronunciation of letter sounds
+- **Vocabulary Building**: Associated words for each letter
+- **Fine Motor Skills**: Clicking and interacting with elements
+- **Cognitive Development**: Pattern recognition and memory
+
+## Customization 🎨
+
+The website is fully customizable:
+- **Colors**: Modify the CSS variables for different color schemes
+- **Words**: Change the associated words in the JavaScript file
+- **Animations**: Adjust timing and effects in the CSS
+- **Audio**: Replace with custom pronunciation files
+
+## Support 💬
+
+If you encounter any issues:
+1. Ensure your browser supports modern web features
+2. Check that audio is enabled in your browser
+3. Try refreshing the page if audio doesn't work
+4. Use the fallback speech synthesis if online audio fails
+
+---
+
+**Made with ❤️ for little learners everywhere!**
+
+*Perfect for ages 1-5 years old*

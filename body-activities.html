@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Activities - Baby English</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="home-button" onclick="goHome()">🏠 Home</button>
+            <h1 class="page-title">Let's Move Our Bodies! 🎯</h1>
+            <div class="progress-info">
+                <span id="activities-completed">Activities Completed: 0</span>
+                <span id="total-moves">Total Moves: 0</span>
+            </div>
+        </div>
+        
+        <div class="learning-stats">
+            <div class="stat-card">
+                <div class="stat-number" id="total-activity-clicks">0</div>
+                <div class="stat-label">Total Clicks</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="unique-activities">0</div>
+                <div class="stat-label">Activities Done</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="favorite-activity">-</div>
+                <div class="stat-label">Favorite Activity</div>
+            </div>
+        </div>
+        
+        <div class="activities-container">
+            <div class="activities-grid">
+                <div class="activity-card" onclick="playActivity('Clap Hands')" data-activity="Clap Hands">
+                    <div class="activity-icon">👏</div>
+                    <div class="activity-name">Clap Hands</div>
+                    <div class="activity-instruction">Clap your hands together!</div>
+                    <div class="activity-sound">👏 Clap! Clap! Clap!</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="activity-card" onclick="playActivity('Wave Hello')" data-activity="Wave Hello">
+                    <div class="activity-icon">👋</div>
+                    <div class="activity-name">Wave Hello</div>
+                    <div class="activity-instruction">Wave your hand back and forth!</div>
+                    <div class="activity-sound">👋 Hello! Hello!</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="activity-card" onclick="playActivity('Touch Nose')" data-activity="Touch Nose">
+                    <div class="activity-icon">👃</div>
+                    <div class="activity-name">Touch Nose</div>
+                    <div class="activity-instruction">Touch your nose with your finger!</div>
+                    <div class="activity-sound">👃 Touch your nose!</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="activity-card" onclick="playActivity('Touch Eyes')" data-activity="Touch Eyes">
+                    <div class="activity-icon">👀</div>
+                    <div class="activity-name">Touch Eyes</div>
+                    <div class="activity-instruction">Touch your eyes gently!</div>
+                    <div class="activity-sound">👀 Touch your eyes!</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="activity-card" onclick="playActivity('Touch Ears')" data-activity="Touch Ears">
+                    <div class="activity-icon">👂</div>
+                    <div class="activity-name">Touch Ears</div>
+                    <div class="activity-instruction">Touch your ears!</div>
+                    <div class="activity-sound">👂 Touch your ears!</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="activity-card" onclick="playActivity('Open Mouth')" data-activity="Open Mouth">
+                    <div class="activity-icon">😮</div>
+                    <div class="activity-name">Open Mouth</div>
+                    <div class="activity-instruction">Open your mouth wide!</div>
+                    <div class="activity-sound">😮 Open your mouth!</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="activity-card" onclick="playActivity('Stick Out Tongue')" data-activity="Stick Out Tongue">
+                    <div class="activity-icon">😛</div>
+                    <div class="activity-name">Stick Out Tongue</div>
+                    <div class="activity-instruction">Stick out your tongue!</div>
+                    <div class="activity-sound">😛 Stick out your tongue!</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="activity-card" onclick="playActivity('Touch Head')" data-activity="Touch Head">
+                    <div class="activity-icon">👶</div>
+                    <div class="activity-name">Touch Head</div>
+                    <div class="activity-instruction">Touch your head!</div>
+                    <div class="activity-sound">👶 Touch your head!</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="activity-card" onclick="playActivity('Touch Shoulders')" data-activity="Touch Shoulders">
+                    <div class="activity-icon">👤</div>
+                    <div class="activity-name">Touch Shoulders</div>
+                    <div class="activity-instruction">Touch your shoulders!</div>
+                    <div class="activity-sound">👤 Touch your shoulders!</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="activity-card" onclick="playActivity('Touch Belly')" data-activity="Touch Belly">
+                    <div class="activity-icon">🤰</div>
+                    <div class="activity-name">Touch Belly</div>
+                    <div class="activity-instruction">Touch your belly!</div>
+                    <div class="activity-sound">🤰 Touch your belly!</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="activity-card" onclick="playActivity('Touch Knees')" data-activity="Touch Knees">
+                    <div class="activity-icon">🦵</div>
+                    <div class="activity-name">Touch Knees</div>
+                    <div class="activity-instruction">Touch your knees!</div>
+                    <div class="activity-sound">🦵 Touch your knees!</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="activity-card" onclick="playActivity('Touch Feet')" data-activity="Touch Feet">
+                    <div class="activity-icon">🦶</div>
+                    <div class="activity-name">Touch Feet</div>
+                    <div class="activity-instruction">Touch your feet!</div>
+                    <div class="activity-sound">🦶 Touch your feet!</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="activity-card" onclick="playActivity('Jump')" data-activity="Jump">
+                    <div class="activity-icon">🦘</div>
+                    <div class="activity-name">Jump</div>
+                    <div class="activity-instruction">Jump up and down!</div>
+                    <div class="activity-sound">🦘 Jump! Jump! Jump!</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="activity-card" onclick="playActivity('Spin Around')" data-activity="Spin Around">
+                    <div class="activity-icon">🌀</div>
+                    <div class="activity-name">Spin Around</div>
+                    <div class="activity-instruction">Spin around in circles!</div>
+                    <div class="activity-sound">🌀 Spin around!</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="activity-card" onclick="playActivity('Dance')" data-activity="Dance">
+                    <div class="activity-icon">💃</div>
+                    <div class="activity-name">Dance</div>
+                    <div class="activity-instruction">Dance to the music!</div>
+                    <div class="activity-sound">💃 Dance! Dance! Dance!</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="activity-card" onclick="playActivity('Stretch')" data-activity="Stretch">
+                    <div class="activity-icon">🧘</div>
+                    <div class="activity-name">Stretch</div>
+                    <div class="activity-instruction">Stretch your arms up high!</div>
+                    <div class="activity-sound">🧘 Stretch up high!</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="activity-card" onclick="playActivity('Bend Down')" data-activity="Bend Down">
+                    <div class="activity-icon">⬇️</div>
+                    <div class="activity-name">Bend Down</div>
+                    <div class="activity-instruction">Bend down and touch the ground!</div>
+                    <div class="activity-sound">⬇️ Bend down low!</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="activity-card" onclick="playActivity('Wiggle Fingers')" data-activity="Wiggle Fingers">
+                    <div class="activity-icon">👆</div>
+                    <div class="activity-name">Wiggle Fingers</div>
+                    <div class="activity-instruction">Wiggle your fingers!</div>
+                    <div class="activity-sound">👆 Wiggle your fingers!</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="activity-card" onclick="playActivity('Wiggle Toes')" data-activity="Wiggle Toes">
+                    <div class="activity-icon">🦶</div>
+                    <div class="activity-name">Wiggle Toes</div>
+                    <div class="activity-instruction">Wiggle your toes!</div>
+                    <div class="activity-sound">🦶 Wiggle your toes!</div>
+                    <div class="click-count">0</div>
+                </div>
+                
+                <div class="activity-card" onclick="playActivity('Blink Eyes')" data-activity="Blink Eyes">
+                    <div class="activity-icon">😉</div>
+                    <div class="activity-name">Blink Eyes</div>
+                    <div class="activity-instruction">Blink your eyes!</div>
+                    <div class="activity-sound">😉 Blink! Blink! Blink!</div>
+                    <div class="click-count">0</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="audio-controls">
+            <button class="play-all-activities-button" onclick="playAllActivities()">🎵 Play All Activities</button>
+            <button class="stop-button" onclick="stopAudio()">⏹️ Stop</button>
+            <button class="reset-button" onclick="resetActivityStats()">🔄 Reset Stats</button>
+            <button class="back-button" onclick="goToOrgans()">← Back to Body Parts</button>
+        </div>
+        
+        <div class="learning-tips">
+            <h3>💡 Activity Tips:</h3>
+            <ul>
+                <li>Click any activity to hear the instruction and do the movement!</li>
+                <li>Follow along with the audio instructions</li>
+                <li>Use the "Play All Activities" button to hear all instructions</li>
+                <li>Watch your progress as you complete activities</li>
+                <li>Have fun moving your body while learning English!</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
